@@ -2,9 +2,10 @@ services:
   scylla:
     image: scylladb/scylla:6.2
     container_name: scylla-demo
-    command: --smp 1 --memory 1G --overprovisioned 1 --developer-mode 1 --reactor-backend=epoll
+    command: --smp 1 --memory 1G --overprovisioned 1 --developer-mode 1 --reactor-backend=epoll --rpc-address 0.0.0.0 --broadcast-rpc-address 127.0.0.1
     ports:
       - "9042:9042"
+      - "19042:19042"
     healthcheck:
       test: ["CMD-SHELL", "cqlsh -e 'describe cluster' 127.0.0.1 9042 || exit 1"]
       interval: 10s
