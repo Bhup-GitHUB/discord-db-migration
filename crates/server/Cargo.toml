@@ -1,0 +1,11 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+proto = { path = "../proto" }
+tokio = { workspace = true }
+tonic = { workspace = true }
+scylla = { workspace = true }
+anyhow = { workspace = true }

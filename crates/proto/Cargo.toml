@@ -1,0 +1,9 @@
+[package]
+name = "proto"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tonic = { workspace = true }
+tonic-prost = { workspace = true }
+prost = { workspace = true }

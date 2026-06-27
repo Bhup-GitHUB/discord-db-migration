@@ -1,0 +1,14 @@
+[workspace]
+resolver = "2"
+members = ["crates/proto", "crates/server", "crates/bench"]
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+tonic = "0.14"
+tonic-prost = "0.14"
+tonic-prost-build = "0.14"
+prost = "0.14"
+scylla = "1"
+clap = { version = "4", features = ["derive"] }
+hdrhistogram = "7"
+anyhow = "1"
